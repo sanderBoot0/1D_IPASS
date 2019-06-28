@@ -1,7 +1,7 @@
 #include "hwlib.hpp"
 #include "../headers/neopixel_uno.hpp"
 
-void neopixel_uno::flush() override
+void neopixel_uno::flush()
 {
     auto old_port = PORTB;
     for (uint8_t i = 0; i < n_leds; i++)

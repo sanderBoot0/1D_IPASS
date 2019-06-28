@@ -1,7 +1,7 @@
 #include "hwlib.hpp"
 #include "../headers/neopixel_due.hpp"
 
-void neopixel_due::flush() override
+void neopixel_due::flush()
 {
     for (uint8_t i = 0; i < n_leds; i++)
     {

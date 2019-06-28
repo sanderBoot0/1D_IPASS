@@ -9,7 +9,7 @@
 #############################################################################
 
 # source files in this project (main.cpp is automatically assumed)
-SOURCES := 
+SOURCES := ../library/source/HC_12.cpp ../library/source/neopixel.cpp ../library/source/neopixel_uno.cpp
 
 # header files in this project
 HEADERS := ../library/headers/HC_12.hpp ../library/headers/HC_12_uno.hpp ../library/headers/neopixel_uno.hpp ../library/headers/GRB_decorator.hpp ../library/headers/helpmath.hpp

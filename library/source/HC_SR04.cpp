@@ -1,5 +1,5 @@
 #include "hwlib.hpp"
-#include "../headers/HC-SR04.hpp"
+#include "../headers/HC_SR04.hpp"
 
 HC_SR04::HC_SR04(hwlib::pin_out &trigger, hwlib::pin_in &echo):
         trigger( trigger ), echo( echo ), time_us( 0 )

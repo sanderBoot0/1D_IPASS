@@ -1,7 +1,7 @@
 #include "hwlib.hpp"
 
 #include "../library/headers/neopixel_due.hpp"
-#include "../library/headers/HC-SR04.hpp"
+#include "../library/headers/HC_SR04.hpp"
 #include "../library/headers/helpmath.hpp"
 #include "../library/headers/HC_12_due.hpp"
 
