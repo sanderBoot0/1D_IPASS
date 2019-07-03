@@ -29,7 +29,7 @@ int main()
             if(return_reading != '\0') {
                 reading = (uint8_t) return_reading;
                 hwlib::cout << reading << '\n' << hwlib::flush;
-                rf_data = module.reading;
+                rf_data = return_reading;
 
                 mapped_reading = map(rf_data, 20, 100, 255, 0);
             }

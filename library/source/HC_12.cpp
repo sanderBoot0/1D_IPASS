@@ -52,34 +52,91 @@ void HC_12::flush()
 
 char HC_12::read()
 {
+    reading = 0;
     char reading_2 = 0;
     int loopCount = 0;
     rx.refresh();
 
-    while(rx.read() && loopCount < 5000) {
+    int max_loops;
+    if (wait_time == 80) 
+        max_loops = 10000;
+    else 
+        max_loops = 50000;
+
+    while(rx.read() && loopCount < max_loops) {
         hwlib::wait_us(10);
         loopCount++;
         rx.refresh();
     }
 
     hwlib::wait_us(wait_time);
-    reading = 0;
 
-    for(int i = 0; i < 8; i++) {
-        rx.refresh();
-        reading |= (rx.read() << i);
-        hwlib::wait_us(wait_time);
-    }
+    rx.refresh();
+    reading = reading | (rx.read() << 0);
+    hwlib::wait_us(wait_time);
 
-    hwlib::wait_us(2*wait_time);
+    rx.refresh();
+    reading = reading | (rx.read() << 1);
+    hwlib::wait_us(wait_time);
 
-    for(int i = 0; i < 8; i++) {
-        rx.refresh();
-        reading_2 |= (rx.read() << i);
-        hwlib::wait_us(wait_time);
-    }
+    rx.refresh();
+    reading = reading | (rx.read() << 2);
+    hwlib::wait_us(wait_time);
 
-    if(reading_2 == '\n')
+    rx.refresh();
+    reading = reading | (rx.read() << 3);
+    hwlib::wait_us(wait_time);
+
+    rx.refresh();
+    reading = reading | (rx.read() << 4);
+    hwlib::wait_us(wait_time);
+
+    rx.refresh();
+    reading = reading | (rx.read() << 5);
+    hwlib::wait_us(wait_time);
+
+    rx.refresh();
+    reading = reading | (rx.read() << 6);
+    hwlib::wait_us(wait_time);
+
+    rx.refresh();
+    reading = reading | (rx.read() << 7);
+    hwlib::wait_us(wait_time);
+
+    hwlib::wait_us(2*wait_time+wait_time/7+5);
+
+    rx.refresh();
+    reading_2 = reading_2 | (rx.read() << 0);
+    hwlib::wait_us(wait_time);
+
+    rx.refresh();
+    reading_2 = reading_2 | (rx.read() << 1);
+    hwlib::wait_us(wait_time);
+
+    rx.refresh();
+    reading_2 = reading_2 | (rx.read() << 2);
+    hwlib::wait_us(wait_time);
+
+    rx.refresh();
+    reading_2 = reading_2 | (rx.read() << 3);
+    hwlib::wait_us(wait_time);
+
+    rx.refresh();
+    reading_2 = reading_2 | (rx.read() << 4);
+    hwlib::wait_us(wait_time);
+
+    rx.refresh();
+    reading_2 = reading_2 | (rx.read() << 5);
+    hwlib::wait_us(wait_time);
+
+    rx.refresh();
+    reading_2 = reading_2 | (rx.read() << 6);
+    hwlib::wait_us(wait_time);
+
+    rx.refresh();
+    reading_2 = reading_2 | (rx.read() << 7);
+
+    if(reading_2 == '\n' || (uint8_t)reading_2 == 20)
         return reading;
 
     return '\0';
