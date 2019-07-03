@@ -29,12 +29,8 @@ public:
     {}
 
     void write (uint8_t p_leds[][3]) {
-        for ( int i = 0; i < slave.n_leds; i++ ) {
-            uint8_t temp = p_leds[i][0];
-            p_leds[i][0] = p_leds[i][1];
-            p_leds[i][1] = temp;
-        }
-        slave.write(p_leds);
+        for ( int i = 0; i < slave.n_leds; i++ )
+            slave.write(i, p_leds[i][1], p_leds[i][0], p_leds[i][2]);
     }
 
     void write (uint8_t led_index, uint8_t red, uint8_t green, uint8_t blue) {
@@ -49,7 +45,7 @@ public:
         slave.clear();
     }
 
-    void wave () {
+    void wave (const int ms = 500 ) {
         for(;;) {
             for(int i = 0; i < 256; i++) {
                 write_all(255, i, 0); flush();
@@ -78,7 +74,7 @@ public:
         }
     }
 
-    void flash () {
+    void flash ( const int ms = 10 ) {
         for(;;) {
             write_all(255, 0, 0); flush();
             hwlib::wait_ms(ms);

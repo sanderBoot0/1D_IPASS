@@ -26,11 +26,12 @@
 class neopixel
 {
 protected:
-    const int n_leds;
     uint8_t leds[100][3];
     bool something_changed = false;
 
 public:
+    const int n_leds;
+    
     /// \brief
     /// Construct an interface for the adafruit ws2812
     /// \details
