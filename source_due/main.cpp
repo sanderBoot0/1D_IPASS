@@ -26,6 +26,8 @@ int main()
     int reading_ultra_module;
     int mapped_reading;
 
+    strip.wave();
+
     for(;;) {
         if (loopCount%64 == 0) {
             ultra_module.refresh();
