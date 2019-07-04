@@ -25,4 +25,6 @@ public:
     {}
 };
 
+/// \example HC_12_example.cpp
+
 #endif // HC_12_UNO_HPP

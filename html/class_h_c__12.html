@@ -178,7 +178,8 @@ Note that the name of the class is <a class="el" href="class_h_c__12.html" title
 
 <p>flush buffer to chip </p>
 <p>If the send method is called since the flush, it will flush its buffer. It wil alwasy send an endbyte, which is '\n'. </p>
-
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="_h_c_12_example_8cpp-example.html#a3">HC_12_example.cpp</a>.</dd>
+</dl>
 </div>
 </div>
 <a id="ade34e07a7fbc8bd106685b7dc70b2a2e"></a>
@@ -199,7 +200,8 @@ Note that the name of the class is <a class="el" href="class_h_c__12.html" title
 <p>Read a char. </p>
 <p>This is an non-blocking method which looks for data at the rx pin.<br />
 It returns '\0' if the endbyte is not readed. </p>
-
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="_h_c_12_example_8cpp-example.html#a4">HC_12_example.cpp</a>.</dd>
+</dl>
 </div>
 </div>
 <a id="ac20939a6f250a461e1d04ffcefbe0861"></a>
@@ -219,13 +221,14 @@ It returns '\0' if the endbyte is not readed. </p>
 </div><div class="memdoc">
 
 <p>send char to buffer </p>
-<p>Pass the data you want to send to this function. </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Pass the data you want to send to this function. You cant send a char \'\0\'. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>char that you want to send </td></tr>
   </table>
   </dd>
 </dl>
-
+<dl><dt><b>Examples: </b></dt><dd><a class="el" href="_h_c_12_example_8cpp-example.html#a2">HC_12_example.cpp</a>.</dd>
+</dl>
 </div>
 </div>
 <a id="a408830e1e676085be479239e5fa1a731"></a>
@@ -246,7 +249,7 @@ It returns '\0' if the endbyte is not readed. </p>
 
 <p>send uint8_t to buffer </p>
 <p>Pass the data you want to send to this function.<br />
-This function writes the uint8_t to the char_buffer. </p><dl class="params"><dt>Parameters</dt><dd>
+This function writes the uint8_t to the char_buffer. You cant send the number 0 </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">data</td><td>uint8_t integer that you want to send </td></tr>
   </table>
@@ -261,7 +264,7 @@ This function writes the uint8_t to the char_buffer. </p><dl class="params"><dt>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jul 3 2019 10:27:41 for IPASS - Sander Boot by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jul 4 2019 13:25:39 for IPASS - Sander Boot by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.13
 </small></address>

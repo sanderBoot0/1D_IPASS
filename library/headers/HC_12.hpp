@@ -44,6 +44,7 @@ public:
     /// send char to buffer
     /// \details
     /// Pass the data you want to send to this function.
+    /// You cant send a char \'\\0\'.
     /// \param  data    char that you want to send
     void send(char data);
 
@@ -52,6 +53,7 @@ public:
     /// \details
     /// Pass the data you want to send to this function.\n
     /// This function writes the uint8_t to the char_buffer.
+    /// You cant send the number 0
     /// \param  data    uint8_t integer that you want to send
     void send(uint8_t data);
     
@@ -69,5 +71,7 @@ public:
     /// It returns '\\0' if the endbyte is not readed.
     char read();
 };
+
+/// \example HC_12_example.cpp
 
 #endif // HC_12_HPP

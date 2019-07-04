@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.13"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>IPASS - Sander Boot: Examples</title>
+<title>IPASS - Sander Boot: HC_12_example.cpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -59,18 +59,10 @@ $(function() {
 
 <div class="header">
   <div class="headertitle">
-<div class="title">Examples</div>  </div>
+<div class="title">HC_12_example.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock">Here is a list of all examples:</div><ul>
-<li><a class="el" href="_h_c_12_example_8cpp-example.html">HC_12_example.cpp</a></li>
-
-<li><a class="el" href="_h_c__s_r04_example_8cpp-example.html">HC_SR04_example.cpp</a></li>
-
-<li><a class="el" href="neopixel_example_8cpp-example.html">neopixel_example.cpp</a></li>
-
-</ul>
-</div><!-- contents -->
+<div class="fragment"><div class="line"><span class="keywordtype">int</span> main() {</div><div class="line">    <span class="keyword">auto</span> tx = hwlib::target::pin_out( hwlib::target::pins::d2 );</div><div class="line">    <span class="keyword">auto</span> rx = hwlib::target::pin_in( hwlib::target::pins::d3);</div><div class="line"></div><div class="line">    <a name="_a0"></a><a class="code" href="class_h_c__12__due.html">HC_12_due</a> module(tx, rx);</div><div class="line">    <span class="comment">//or</span></div><div class="line">    <a name="_a1"></a><a class="code" href="class_h_c__12__uno.html">HC_12_uno</a> module(tx, rx);</div><div class="line"></div><div class="line">    <span class="comment">// send a char</span></div><div class="line">    module.<a name="a2"></a><a class="code" href="class_h_c__12.html#ac20939a6f250a461e1d04ffcefbe0861">send</a>(<span class="charliteral">&#39;A&#39;</span>);</div><div class="line">    module.<a name="a3"></a><a class="code" href="class_h_c__12.html#a4fd1e51a9617b257a33d9037b7806a6e">flush</a>();</div><div class="line"></div><div class="line">    <span class="comment">// send a number</span></div><div class="line">    module.<a class="code" href="class_h_c__12.html#ac20939a6f250a461e1d04ffcefbe0861">send</a>(3);</div><div class="line">    module.<a class="code" href="class_h_c__12.html#a4fd1e51a9617b257a33d9037b7806a6e">flush</a>();</div><div class="line"></div><div class="line">    <span class="comment">// read a char</span></div><div class="line">    <span class="keywordtype">char</span> reading = module.<a name="a4"></a><a class="code" href="class_h_c__12.html#ade34e07a7fbc8bd106685b7dc70b2a2e">read</a>();</div><div class="line">    <span class="comment">// read an unsigned integer</span></div><div class="line">    uint8_t reading = (uint8_t)module.<a class="code" href="class_h_c__12.html#ade34e07a7fbc8bd106685b7dc70b2a2e">read</a>();</div><div class="line">}</div></div><!-- fragment --> </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated on Thu Jul 4 2019 13:25:39 for IPASS - Sander Boot by &#160;<a href="http://www.doxygen.org/index.html">

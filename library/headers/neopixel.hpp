@@ -109,4 +109,6 @@ public:
     void flash( const int ms = 500 );
 };
 
+/// \example neopixel_example.cpp
+
 #endif // NEOPIXEL_HPP

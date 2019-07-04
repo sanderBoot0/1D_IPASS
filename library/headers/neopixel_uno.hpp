@@ -55,4 +55,6 @@ public:
     void flush( ) override;
 };
 
+/// \example neopixel_example.cpp
+
 #endif // NEOPIXEL_UNO_HPP
