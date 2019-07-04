@@ -7,6 +7,7 @@ Ik heb gebruik gemaakt van de volgende hardware:
 - 1 x HC-SR04 ultrasone chip
 - 2 x HC-12 rf communication chip
 - 1 x ws2812 led ring 12 leds
+- Jumper wires to connect everything
 
 - Arduino Due
 - Arduino Uno
