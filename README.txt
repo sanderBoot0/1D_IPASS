@@ -13,3 +13,6 @@ Ik heb gebruik gemaakt van de volgende hardware:
 - Arduino Uno
 
 Tests zijn te vinden in de folder tests
+
+De implementatie voor flush functie van de ws2812 is van:
+  http://kevindarrah.com/download/arduino_code/WS1812_V4_FOR_VIDEO.ino
