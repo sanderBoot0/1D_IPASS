@@ -52,6 +52,8 @@ public:
     /// This function writes only if something is changed in the array.
     ///
     /// If so, the array is written to the LEDs, and the bool something_changed is set to false.
+    /// The idea of how to flush is from:\n\t
+    /// kevindarrah.com/download/arduino_code/WS1812_V4_FOR_VIDEO.ino
     void flush( ) override;
 };
 

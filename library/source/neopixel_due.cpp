@@ -1,6 +1,8 @@
 #include "hwlib.hpp"
 #include "../headers/neopixel_due.hpp"
 
+/// The idea of how to flush is from:\n\t
+/// kevindarrah.com/download/arduino_code/WS1812_V4_FOR_VIDEO.ino
 void neopixel_due::flush()
 {
     for (uint8_t i = 0; i < n_leds; i++)

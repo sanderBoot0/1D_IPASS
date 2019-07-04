@@ -83,6 +83,8 @@ public:
     /// \details
     /// This function has to be re-implemented in a subclass.
     /// It is an virtual function in class neopixel because the processor frequencies of the Due and the Uno are different.
+    /// The idea of how to flush is from:\n\t
+    /// kevindarrah.com/download/arduino_code/WS1812_V4_FOR_VIDEO.ino
     virtual void flush( );
 
     /// \brief
